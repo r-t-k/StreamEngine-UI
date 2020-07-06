@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% include "base_head.html" %}
+{% endblock %}
+{% block pageassets %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static "css/profile.css" %}" />
+  
+{% endblock %}
+{% block topnav %}
+{% include "topnav.html" %}
+{% endblock %}
+{% block sidenav %}
+{% include "sidenav.html" %}
+{% endblock %}
+{% block rightnav %}
+{% include "sidenav.html" %}
+{% endblock %}
+{% block first_content %}
+
+{% endblock %}
+{% block content %}
+
+{% endblock %}
+{% block footer %}
+{% include "base_footer.html" %}
+{% endblock %}

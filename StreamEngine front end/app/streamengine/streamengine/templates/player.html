@@ -1,0 +1,17 @@
+<div id="player-wrap">
+    <div id="player-pane">
+        <video-js id=dvr-video  class="vjs-theme-fantasy" muted data-setup='{ "controls": true, "autoplay": true, "preload": "auto" }'>
+            <source
+               src="http://localhost:9000/live/foobar/nightmare.mp4"
+               type="video/mp4"
+               >
+          </video-js>
+        
+          <script>
+          var player = videojs('dvr-video', {autoplay: true});
+          player.aspectRatio('16:9');
+          player.fill(true);
+          player.play();
+          </script>
+    </div>
+</div>

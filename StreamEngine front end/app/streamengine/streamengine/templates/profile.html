@@ -1,0 +1,12 @@
+{% extends "profile_base.html" %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+
+{{ user.get_username }}
+<h1>Streamkey:</h1>
+<h1>{{ channelStreamkey }}</h1>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% block head %}{% endblock %}
+{% block pageassets %}{% endblock %}
+</head>
+<body class="uk-light">
+    <!--Base Layout-->
+    <div id="root">
+        <!--top navbar-->
+        {% block topnav %}{% endblock %}
+        <!--end top navbar-->
+        <!--Side Nav-->
+        {% block sidenav %}{% endblock %}
+   
+        <!--end side nav-->
+        <!--Right Nav-->
+        {% block rightnav %}{% endblock %}
+        <!--end right nav-->        
+        <!--Main Grid-->
+        <div id="main-grid" class="uk-text-center uk-width-5-6" uk-grid>
+            <!-- Content Pane -->
+            <div id="content-pane" class="uk-width-expand">
+                <div id="content" class="uk-container-expand">
+                    <div class="uk-container-expand uk-flex uk-flex-column">
+                        
+                        <!-- Home Slider-->
+                        {% block first_content %}{% endblock %}
+                        <!-- End Home Slider-->
+                        <!-- content -->
+                        {% block content %}{% endblock %}
+                        <!-- end content -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Content Pane -->
+        </div>
+        <!--end main grid-->
+{% block footer %}{% endblock %}
