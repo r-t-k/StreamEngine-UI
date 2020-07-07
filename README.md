@@ -30,3 +30,8 @@ Reload Nginx
 
 ### config
 edit the ```ui.conf``` for domain and ssl
+
+
+#### Reference
+Nginx: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04
+Django over uwsgi: https://www.eidel.io/2017/07/10/dockerizing-django-uwsgi-postgres/
