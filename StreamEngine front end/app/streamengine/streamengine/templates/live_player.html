@@ -6,7 +6,8 @@
         <video id="video"></video>
         <script>
             var video = document.getElementById('video');
-            var videoSrc = 'http://45.33.127.44:8080/live/{{object.streamkey}}_ff.m3u8'; // "_ff" = transcoded. in this case it is from the 720p server
+            //var videoSrc = 'http://45.33.127.44:8080/live/{{object.streamkey}}_ff.m3u8'; // "_ff" = transcoded. in this case it is from the 720p server 
+            var videoSrc = 'http://45.79.20.198:8080/live/{{object.streamkey}}_ff.m3u8'; // "_ff" = transcoded. in this case it is from the 1080p server
             if (Hls.isSupported()) {
                 var hls = new Hls();
                 hls.loadSource(videoSrc);

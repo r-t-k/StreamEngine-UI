@@ -6,4 +6,4 @@ services:
     volumes:
       - './StreamEngine front end/app/streamengine:/code'
     ports:
-      - '8000:8000'
+      - '80:8000'
