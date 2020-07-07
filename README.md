@@ -36,3 +36,5 @@ edit the ```ui.conf``` for domain and ssl
 Nginx: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04
 
 Django over uwsgi: https://www.eidel.io/2017/07/10/dockerizing-django-uwsgi-postgres/
+
+Dockerfile: https://www.caktusgroup.com/blog/2017/03/14/production-ready-dockerfile-your-python-django-app/
