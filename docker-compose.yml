@@ -4,6 +4,6 @@ services:
     build: .
     command: 'python manage.py runserver 0.0.0.0:8000'
     volumes:
-      - './StreamEngine front end/app/streamengine:/code'
+      - './frontend/app/streamengine:/code'
     ports:
       - '80:8000'
