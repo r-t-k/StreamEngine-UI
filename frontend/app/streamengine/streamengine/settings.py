@@ -22,10 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ixluvv+2ycuo!#6t70ar2#+$ew8i!p4t+eh!0cvnd76#f4fabt'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.getenv('DJANGO_ENV') == 'prod':
+    DEBUG = False
+    ALLOWED_HOSTS = ['.streamengine.com']
+    # ...
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
