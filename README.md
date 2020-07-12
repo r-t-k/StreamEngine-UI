@@ -11,6 +11,14 @@ There are essentially two parts right now, with a third (db) being worked on.
 
 You have the docker-compose portion and the Nginx portion
 
+### Docker
+
+Install docker and docker-compose
+
+clone this repo and check directory names editing the docker compose file as necessary
+
+then run ```docker-compose up --build -d```
+
 ### uWSGI config/dockerfile
 
 Hot reload is turned on by default
@@ -23,14 +31,6 @@ remove the param:
 from
 
 ```CMD ["uwsgi", "--py-autoreload=1"]```
-
-### Docker
-
-Install docker and docker-compose
-
-clone this repo and check directory names editing the docker compose file as necessary
-
-then run ```docker-compose up --build -d```
 
 
 ### NGINX

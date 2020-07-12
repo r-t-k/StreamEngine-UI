@@ -135,5 +135,5 @@ STATICFILES_DIRS = [
     
 ]
 AUTH_USER_MODEL = 'streamengine.CustomUser' 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/channels/demo'
 LOGOUT_REDIRECT_URL = '/'
