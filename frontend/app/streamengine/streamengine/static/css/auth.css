@@ -1,0 +1,27 @@
+#main-grid {
+    margin-left: calc(100% * 1 / 12.001);
+    margin-left: calc(100% * 1 / 12.001);
+    width: calc(100% * 10 / 12.001);
+}
+#content-pane {
+    min-height: 100vh;
+}
+
+#content {
+    margin-top: 0;
+    min-height: 100vh;
+}
+
+
+
+
+#auth-center-wrap {
+    width:100%;
+    background-color: var( --violet-blue);
+    height: 100vh;
+}
+
+#auth-icon{
+    height: 150px;
+}
+
