@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% include "base_head.html" %}
+{% endblock %}
+{% block topnav %}
+{% include "topnav.html" %}
+{% endblock %}
+{% block sidenav %}
+{% include "sidenav.html" %}
+{% endblock %}
+{% block first_content %}
+{% endblock %}
+{% block content %}
+
+
+
+
+
+
+<p>Logged out!</p>  
+  <a href="{% url 'login'%}">Click here to login again.</a>
+
+
+
+
+
+
+
+{% endblock %}
+{% block footer %}
+{% include "base_footer.html" %}
+{% endblock %}
+
+
+

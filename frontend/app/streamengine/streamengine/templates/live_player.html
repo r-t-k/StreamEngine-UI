@@ -3,22 +3,25 @@
 
 
 
-        <div id="vid"></div>
+        <div id="player" style="position:absolute;top:0;right:0;bottom:0;left:0"></div>
         <script>
+            var playerElement = document.getElementById("player");
+
             var player = new Clappr.Player({
-                source: "http://45.79.20.198:8080/live/{{object.streamkey}}_ff.m3u8",
+                source: 'https://transcode.streamengine.live/live/master.m3u8', //http://45.79.20.198:8080/live/master.m3u8 https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8
+                poster: 'http://clappr.io/poster.png',
                 plugins: [LevelSelector],
-                parentId: "#vid",
-                width: 1920,
-                height: 1080,
-                hideMediaControl: false,
-                autoPlay: true
+                mute: false,
+                autoplay: false,
+                mediacontrol: {
+                    'seekbar': '#c70724',
+                    'buttons': '#c70724'
+                },
+                height: '100%',
+                width: '100%'
             });
 
-
-            //var videoSrc = 'http://45.33.127.44:8080/live/{{object.streamkey}}_ff.m3u8'; // "_ff" = transcoded. in this case it is from the 720p server 
-            //var videoSrc = 'http://45.79.20.198:8080/live/{{object.streamkey}}_ff.m3u8'; // "_ff" = transcoded. in this case it is from the 1080p server
-            //var videoSrc = 'http://45.79.52.159:1935/se-test/foo/playlist.m3u8'; // wowza
+            player.attachTo(playerElement);
         </script>
 
     </div>

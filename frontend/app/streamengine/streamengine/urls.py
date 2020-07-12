@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 
-from .views import  index, channel, SignUpView, profile, ChannelDetailView, streamAuth, go_live, stop_live
+from .views import index, channel, SignUpView, profile, ChannelDetailView, streamAuth, go_live, stop_live
 
 
 def fake_view(*args, **kwargs):
@@ -31,15 +31,13 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("/", index, name="index"),
     path("", index, name="index"),
-    path('auth_landing', TemplateView.as_view(template_name='auth_landing.html'), name='auth'),
+    path('auth_landing', TemplateView.as_view(
+        template_name='auth_landing.html'), name='auth'),
     path("home", index, name="index"),
     path("channel", channel, name="channel"),
-    path("profile", profile, name="profile"),
-    path('signup/', SignUpView.as_view(), name='signup'),
-    path('/', include('django.contrib.auth.urls')),
     path('channels/<slug>', ChannelDetailView.as_view(), name='channels'),
     path('stream_auth/<key>', streamAuth, name='stream_auth'),
     path('go_live', go_live, name='go_live'),
-    path('stop_live', stop_live, name='stop_live')
+    path('stop_live', stop_live, name='stop_live'),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
- 

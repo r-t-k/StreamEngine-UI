@@ -29,4 +29,4 @@ ENV UWSGI_STATIC_MAP="/static/=/code/streamengine/static/" UWSGI_STATIC_EXPIRES_
 # Uncomment after creating your docker-entrypoint.sh
 # ENTRYPOINT ["/code/docker-entrypoint.sh"]
 
-CMD ["uwsgi", "--show-config"]
+CMD ["uwsgi", "--py-autoreload=1"]

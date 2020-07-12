@@ -8,6 +8,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from django.views.generic.detail import DetailView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .forms import CustomUserCreationForm
 from .models import Channel, CustomUser
@@ -19,7 +21,7 @@ class SignUpView(CreateView):
     template_name = 'signup.html'
 
 
-class ChannelDetailView(DetailView):
+class ChannelDetailView(LoginRequiredMixin, DetailView):
     # slug_field = 'slug'
     # slug_url_kwarg = 'slug'
 
@@ -31,11 +33,11 @@ class ChannelDetailView(DetailView):
 
         return context
 
-
+@login_required
 def index(request):
     return render(request, 'index.html')
 
-
+@login_required
 def channel(request):
     return render(request, 'channel.html')
 
